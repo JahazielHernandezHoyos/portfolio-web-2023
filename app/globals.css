@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 30, 30, 30; 
+  --background-end-rgb: 60, 60, 60;
+}
+
+@media (prefers-color-scheme: no-preference) {
+  :root {
+    --foreground-rgb: 200, 200, 200;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  @apply text-white;
+  background: linear-gradient(
+    90deg,
+    rgba(var(--background-start-rgb), 255) 0%,
+    rgba(var(--background-end-rgb), 255 ) 100%
+  );
+} 
